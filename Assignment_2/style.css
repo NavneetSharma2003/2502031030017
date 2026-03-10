@@ -1,0 +1,281 @@
+/* =========================================
+   1. GLOBAL VARIABLES & RESET
+   ========================================= */
+:root {
+    --color-primary: #F28500; /* That Foodie Orange */
+    --color-primary-hover: #e07b00;
+    --color-text-main: #333333;
+    --color-text-muted: #888888;
+    --color-border: #E5E7EB;
+    --color-bg-light: #F9FAFB;
+    --color-white: #FFFFFF;
+    
+    --border-radius: 8px;
+    --font-stack: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
+}
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: var(--font-stack);
+    background-color: var(--color-bg-light);
+    color: var(--color-text-main);
+    line-height: 1.5;
+}
+
+/* =========================================
+   2. LAYOUT: FLEXBOX CENTERING
+   ========================================= */
+.auth-layout {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    min-height: 100vh;
+    padding: 20px;
+}
+
+/* =========================================
+   3. THE CARD COMPONENT
+   ========================================= */
+.auth-card {
+    background-color: var(--color-white);
+    width: 100%;
+    max-width: 440px;
+    padding: 40px;
+    border-radius: var(--border-radius);
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.05); /* Soft, modern shadow */
+    border: 1px solid var(--color-border);
+}
+
+.auth-card__header {
+    text-align: center;
+    margin-bottom: 30px;
+}
+
+.auth-card__logo {
+    width: 120px;
+    margin-bottom: 15px;
+}
+
+.text-heading {
+    font-size: 24px;
+    font-weight: 700;
+    margin-bottom: 8px;
+}
+
+.text-subtext {
+    font-size: 14px;
+    color: var(--color-text-muted);
+}
+
+/* =========================================
+   4. BUTTONS & SOCIALS
+   ========================================= */
+.auth-card__social-group {
+    display: flex;
+    gap: 15px;
+    margin-bottom: 25px;
+}
+
+.btn {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+    padding: 12px 20px;
+    border-radius: var(--border-radius);
+    font-size: 14px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: all 0.2s ease;
+    text-decoration: none;
+    font-family: inherit;
+}
+
+.btn--outline {
+    flex: 1; /* Makes both social buttons equal width */
+    background-color: transparent;
+    border: 1px solid var(--color-border);
+    color: var(--color-text-main);
+}
+
+.btn--outline:hover {
+    background-color: var(--color-bg-light);
+}
+
+.btn--primary {
+    background-color: var(--color-primary);
+    color: var(--color-white);
+    border: none;
+}
+
+.btn--primary:hover {
+    background-color: var(--color-primary-hover);
+}
+
+.btn--full-width {
+    width: 100%;
+    margin-top: 10px;
+}
+
+/* =========================================
+   5. DIVIDER
+   ========================================= */
+.divider {
+    display: flex;
+    align-items: center;
+    text-align: center;
+    margin-bottom: 25px;
+}
+
+.divider::before,
+.divider::after {
+    content: '';
+    flex: 1;
+    border-bottom: 1px solid var(--color-border);
+}
+
+.divider__text {
+    padding: 0 15px;
+    color: var(--color-text-muted);
+    font-size: 12px;
+    font-weight: 600;
+}
+
+/* =========================================
+   6. FORM ELEMENTS
+   ========================================= */
+.form-group {
+    margin-bottom: 20px;
+}
+
+.form-group__header {
+    display: flex;
+    justify-content: space-between;
+    align-items: baseline;
+    margin-bottom: 8px;
+}
+
+.form-label {
+    display: block;
+    font-size: 14px;
+    font-weight: 600;
+    margin-bottom: 8px;
+}
+
+.form-input {
+    width: 100%;
+    padding: 12px 15px;
+    border: 1px solid var(--color-border);
+    border-radius: var(--border-radius);
+    font-size: 14px;
+    font-family: inherit;
+    transition: border-color 0.2s;
+}
+
+.form-input:focus {
+    outline: none;
+    border-color: var(--color-primary);
+}
+
+/* Inline checkbox styling */
+.form-group--inline {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+}
+
+.form-label--inline {
+    margin-bottom: 0;
+    font-weight: 400;
+    color: var(--color-text-muted);
+}
+
+/* =========================================
+   7. LINKS & FOOTERS
+   ========================================= */
+.link {
+    font-size: 14px;
+    text-decoration: none;
+    font-weight: 600;
+}
+
+.link--warning { color: var(--color-primary); }
+.link--primary { color: var(--color-primary); }
+.link:hover { text-decoration: underline; }
+
+.auth-card__footer {
+    text-align: center;
+    margin-top: 25px;
+    padding-top: 25px;
+    border-top: 1px solid var(--color-border);
+}
+
+.page-footer {
+    margin-top: 20px;
+    text-align: center;
+}
+
+.text-legal {
+    font-size: 12px;
+    color: var(--color-text-muted);
+}
+
+.text-legal a {
+    color: var(--color-text-muted);
+    text-decoration: underline;
+}
+/* Sign Up */
+/* =========================================
+   6.5. INPUT ICONS (NEW)
+   ========================================= */
+.input-wrapper {
+    position: relative;
+    display: flex;
+    align-items: center;
+}
+
+.input-icon {
+    position: absolute;
+    color: var(--color-text-muted);
+    font-size: 16px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+/* Left side icons (like the lock or envelope) shouldn't be clickable */
+.input-icon--left {
+    left: 14px;
+    pointer-events: none; 
+}
+
+/* Right side icons (like the password reveal eye) MUST be clickable */
+.input-icon--right {
+    right: 14px;
+}
+
+.input-icon--btn {
+    background: none;
+    border: none;
+    cursor: pointer;
+    padding: 0;
+}
+
+.input-icon--btn:hover {
+    color: var(--color-text-main);
+}
+
+/* Modifiers to push text out of the way of the icons */
+.form-input--icon-l {
+    padding-left: 40px; 
+}
+
+.form-input--icon-r {
+    padding-right: 40px;
+}
