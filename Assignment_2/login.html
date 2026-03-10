@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>Foodie - Login</title>
+</head>
+<body class="bg-light">
+
+    <main class="auth-layout">
+        
+        <section class="auth-card">
+            
+            <header class="auth-card__header">
+                <img src="logo.svg" alt="Foodie Logo" class="auth-card__logo">
+                <h1 class="text-heading">Welcome Back</h1>
+                <p class="text-subtext">Enter your credentials to access your account</p>
+            </header>
+
+            <div class="auth-card__social-group">
+                <button class="btn btn--outline" type="button">
+                    <img src="google-icon.svg" alt="Google"> Google
+                </button>
+                <button class="btn btn--outline" type="button">
+                    <img src="facebook-icon.svg" alt="Facebook"> Facebook
+                </button>
+            </div>
+
+            <div class="divider">
+                <span class="divider__text">OR CONTINUE WITH</span>
+            </div>
+
+            <form class="auth-form" action="#" method="POST">
+                
+                <div class="form-group">
+                    <label for="email" class="form-label">Email Address</label>
+                    <input type="email" id="email" class="form-input" placeholder="name@example.com" required>
+                </div>
+
+                <div class="form-group">
+                    <div class="form-group__header">
+                        <label for="password" class="form-label">Password</label>
+                        <a href="#" class="link link--warning">Forgot password?</a>
+                    </div>
+                    <input type="password" id="password" class="form-input" placeholder="••••••••" required>
+                </div>
+
+                <div class="form-group form-group--inline">
+                    <input type="checkbox" id="remember" class="form-checkbox">
+                    <label for="remember" class="form-label form-label--inline">Remember me for 30 days</label>
+                </div>
+
+                <button type="submit" class="btn btn--primary btn--full-width">Sign In &rarr;</button>
+                
+            </form>
+
+            <footer class="auth-card__footer">
+                <p class="text-subtext">Don't have an account? <a href="#" class="link link--primary">Sign up</a></p>
+            </footer>
+
+        </section>
+
+        <footer class="page-footer">
+            <p class="text-legal">
+                By clicking sign in, you agree to our <a href="#">Terms of Service</a> and <a href="#">Privacy Policy</a>.
+            </p>
+        </footer>
+
+    </main>
+
+</body>
+</html>

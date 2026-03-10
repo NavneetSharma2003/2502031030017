@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Foodie - Create Account</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body class="bg-light">
+
+    <main class="auth-layout">
+        <section class="auth-card">
+            
+            <header class="auth-card__header">
+                <div class="auth-card__logo-temp">🍴 Foodie</div> <h1 class="text-heading">Create your account</h1> <p class="text-subtext">Start your delicious journey with us today</p> </header>
+
+            <div class="auth-card__social-group">
+                <button class="btn btn--outline" type="button">
+                    <span class="icon">G</span> Google </button>
+                <button class="btn btn--outline" type="button">
+                    <span class="icon">f</span> Facebook </button>
+            </div>
+
+            <div class="divider">
+                <span class="divider__text">OR CONTINUE WITH</span> </div>
+
+            <form class="auth-form" action="#" method="POST">
+                
+                <div class="form-group">
+                    <label for="name" class="form-label">Full Name</label> <div class="input-wrapper">
+                        <span class="input-icon input-icon--left">👤</span>
+                        <input type="text" id="name" class="form-input form-input--icon-l" placeholder="John Doe" required> </div>
+                </div>
+
+                <div class="form-group">
+                    <label for="email" class="form-label">Email Address</label> <div class="input-wrapper">
+                        <span class="input-icon input-icon--left">✉️</span>
+                        <input type="email" id="email" class="form-input form-input--icon-l" placeholder="name@example.com" required> </div>
+                </div>
+
+                <div class="form-group">
+                    <label for="password" class="form-label">Password</label> <div class="input-wrapper">
+                        <span class="input-icon input-icon--left">🔒</span>
+                        <input type="password" id="password" class="form-input form-input--icon-l form-input--icon-r" placeholder="••••••••" required> 
+                        <button type="button" class="input-icon input-icon--right input-icon--btn">👁️</button>
+                    </div>
+                </div>
+
+                <div class="form-group">
+                    <label for="confirm-password" class="form-label">Confirm Password</label> <div class="input-wrapper">
+                        <span class="input-icon input-icon--left">🔒</span>
+                        <input type="password" id="confirm-password" class="form-input form-input--icon-l" placeholder="••••••••" required>
+                    </div>
+                </div>
+
+                <div class="form-group form-group--inline">
+                    <input type="checkbox" id="terms" class="form-checkbox" required>
+                    <label for="terms" class="form-label form-label--inline">
+                        I agree to the <a href="#" class="link link--primary">Terms of Service</a> and <a href="#" class="link link--primary">Privacy Policy</a>. </label>
+                </div>
+
+                <button type="submit" class="btn btn--primary btn--full-width">Create Account &rarr;</button> </form>
+
+            <footer class="auth-card__footer">
+                <p class="text-subtext">Already have an account? <a href="#" class="link link--primary">Sign In</a></p> </footer>
+
+        </section>
+    </main>
+
+</body>
+</html>
